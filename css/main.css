@@ -1,0 +1,32 @@
+/* 
+    CSS Guide 
+
+    1.  General Styles (Normalize)
+
+ */
+ body { 
+    margin: 0;
+    padding: 0;
+ }
+
+
+ /* 1. ---General Styles--- */
+img, embed, object, video, picture { 
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5 { 
+margin: 0;
+padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+input, textarea {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
