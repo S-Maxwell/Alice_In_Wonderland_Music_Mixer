@@ -1,0 +1,59 @@
+/* 
+    CSS Guide 
+
+    1.  General Grid Styles
+        Utility Classes
+    2.  Mobile Grid
+    3.  Tablet Grid
+    4.  Desktop Grid
+    5.  XL Grid
+
+ */
+
+
+ /* 1. ---General Grid Styles--- */
+
+ html {
+    box-sizing: border-box; 
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit; 
+  }
+  /* ---Utility Classes--- */
+  
+  .hidden {
+     display: none;
+  }
+  
+  .box {
+     background-color: #f4f46f;
+     color: rgb(27, 27, 27);
+     border-radius: 5px;
+     padding: 20px;
+     text-align: center;
+     margin-top: 10px;
+     margin-bottom:10px;
+   }
+  
+   .blocky { 
+    display: block;
+    width: 400px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    border: 2px solid #0f0f0f;
+  /* Border: Thick Double */
+   }
+  
+  /* 2. ---Mobile Library Grid Styles--- */
+  
+  
+  /* 3. ---Tablet Library Grid Styles--- */
+  
+  
+  /* 4. ---Desktop Library Grid Styles--- */
+  
+  
+  /* 5. ---X-Large Desktop Library Grid Styles--- */
+  
+  
