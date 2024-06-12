@@ -24,7 +24,7 @@ TODO: Write history
 
 ## Credits
 
-Stacey Kirkbride
+Stacey Kirkbride and Sashoye Maxwell
 
 ## License
 
