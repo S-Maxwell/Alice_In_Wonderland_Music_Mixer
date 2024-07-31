@@ -1,31 +1,60 @@
 console.log("javascript file is linked");
 
-let theKeys = document.querySelectorAll('.key');
+ // JavaScript for drag-and-drop functionality and audio control
+ document.addEventListener('DOMContentLoaded', () => {
+    const audioElements = document.querySelectorAll('.trackref');
+    const dropBoxes = document.querySelectorAll('.undefined-drop');
 
-function logKeyboardKeyCode(event) { 
-    let targetAudio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
-    let targetDiv = document.querySelector(`div[data-key="${event.keyCode}"]`);
+    dropBoxes.forEach(dropBox => {
+        dropBox.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropBox.classList.add('dragover');
+        });
 
-    if (!targetAudio) {
-        return;
-    }
+        dropBox.addEventListener('dragleave', () => {
+            dropBox.classList.remove('dragover');
+        });
 
-    targetAudio.currentTime = 0;
-    targetAudio.play();
+        dropBox.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const trackRef = e.dataTransfer.getData('trackref');
+            const audioElement = document.querySelector(`audio[data-trackref="${trackRef}"]`);
+            if (audioElement) {
+                dropBox.appendChild(audioElement);
+                audioElement.play();
+            }
+            dropBox.classList.remove('dragover');
+        });
+    });
 
-    targetDiv.classList.add('playing'); 
-    console.log(targetAudio, targetDiv);
-}
+    const puzzleImages = document.querySelectorAll('.puzzle-image');
+    puzzleImages.forEach(img => {
+        img.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('trackref', e.target.dataset.minitrack);
+        });
+    });
 
-function removeHighlight(event) {
-    if (event.propertyName !== 'transform') return;
-    this.classList.remove('playing');
-}
+    document.getElementById('play-button').addEventListener('click', () => {
+        document.getElementById('audioMain').play();
+    });
 
-window.addEventListener('keydown', logKeyboardKeyCode);
-theKeys.forEach(
-    key => key.addEventListener(
-        'transitionend',
-        removeHighlight
-    )
-);
+    document.getElementById('pause-button').addEventListener('click', () => {
+        document.getElementById('audioMain').pause();
+    });
+
+    document.getElementById('minus-button').addEventListener('click', () => {
+        const audio = document.getElementById('audioMain');
+        audio.volume = Math.max(0, audio.volume - 0.1);
+    });
+
+    document.getElementById('plus-button').addEventListener('click', () => {
+        const audio = document.getElementById('audioMain');
+        audio.volume = Math.min(1, audio.volume + 0.1);
+    });
+
+    document.getElementById('reset').addEventListener('click', () => {
+        const audio = document.getElementById('audioMain');
+        audio.pause();
+        audio.currentTime = 0;
+    });
+});
