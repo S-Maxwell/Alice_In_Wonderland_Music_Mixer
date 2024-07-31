@@ -1,32 +1,52 @@
-/* 
-    CSS Guide 
-
-    1.  General Styles (Normalize)
-
- */
- body { 
+body, html {
     margin: 0;
     padding: 0;
- }
-
-
- /* 1. ---General Styles--- */
-img, embed, object, video, picture { 
-    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('images/alice_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
 }
 
-p, h1, h2, h3, h4, h5 { 
-margin: 0;
-padding: 0;
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
 }
 
-a {
-    text-decoration: none;
-    transition: all .5s ease-in-out;
+.key {
+    border: 0.5rem solid black;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    padding: 1rem;
+    transition: all 0.07s ease;
+    width: 8rem;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
 }
 
-input, textarea {
+.key img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.key .sound {
     display: block;
-    margin: 0;
-    padding: 0;
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0.5rem;
 }
+
+.key:active {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
+
