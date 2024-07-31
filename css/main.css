@@ -325,7 +325,7 @@ input {
     width: 48px;
     height: 45px;
     margin: 10px 8px;
-    background-color: purple;
+    background-color: lavenderblush;
     color: #000000;
     display: flex;
     align-items: center;
@@ -346,10 +346,10 @@ input {
         box-shadow: inset 6px -6px 6px pink, 4px -2px 4px 0px #000000;
     }
     50% {
-        box-shadow: inset 6px -6px 6px blueviolet, 4px -2px 4px 0px #000000;
+        box-shadow: inset 6px -6px 6px purple, 4px -2px 4px 0px #000000;
     }
     100% {
-        box-shadow: inset 6px -6px 6px lavenderblush, 4px -2px 4px 0px #000000;
+        box-shadow: inset 6px -6px 6px lavender, 4px -2px 4px 0px #000000;
     }
 }
 
@@ -361,7 +361,6 @@ footer {
     background-color: #ffffff;
     color: #000000;
     padding: 0 10px;
-    font-size: small;
 }
 
 footer p {
