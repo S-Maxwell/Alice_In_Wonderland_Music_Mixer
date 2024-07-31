@@ -1,203 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alice in the Wonderland Music Mixer</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/grid.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <title>Alice in Wonderland Music Mixer</title>
+    </head>
+    <body>
+        <header id="bab" class="grid-con">
+            <h1 class="hidden"> Music Mixer</h1>
+         <section id="main-logo" class=" col-start-1 col-span-2">
+            <h2 class="hidden">Logo</h2>
+            <img  src="images/alice_falling.jpg" alt="color-bg" >
+         </section>
 
-    <div id="container">
-        <section id="dj-main" class="grid-con">
-            <div id="dj-box" class="col-start-3 col-end-8">
-                <h2>Character Nav</h2>
-                <nav id="dj-spin">
-                    <ul class="dj">
-                        <li class="jockey">
-                            <div class="img-wrapper">
-                                <img src="images/spin-deck.svg" alt="">
-                            </div>
-                        </li>
-                        <li class="jockey">
-                            <div class="img-wrapper">
-                                <img src="images/spin-deck.svg" alt="">
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
+         
+         <nav id="main-nav" class="col-start-5 col-span-6">
+            <h2 class="hidden">Navigation</h2>
+            
+            <div class="burger-con">
+                
+              <ul id="track-list">
+                <li><p>Track 1 
+                </p> 
+                <audio class="trackref" data-trackref="maintrack1" src="audio/falling-whistle-cartoon-180579.mp3"></audio>
+
+                 </li>
+
+                <li><p>Track 2
+                </p> 
+                    <audio class="trackref" 
+                    data-trackref="maintrack2" 
+                    src="audio/old-fashioned-clock-sound-37729.mp3">
+                 </audio>
+                
+            </li>
+           
+                <li><p>Track 3 
+                </p> 
+                    <audio class="trackref" 
+                    data-trackref="maintrack3" 
+                    src="audio/bookpageshuffle-106111.mp3">
+                 </audio>
+                
+            </li>
+              </ul>
             </div>
+          </nav>
+        
 
-            <section id="reset-display">
-                <h2>Reset Selector</h2>
+          <div id="main-navv" class="col-start-11 col-end-13">
+            <p >Track Selection</p>
+            
+            <input type="checkbox" id="hamburger" class="">
+                        <label for="hamburger">
+                          <img src="images/burger.svg" alt="hamburger menu icon">
+                          
+                        </label>
+        </div>
+
+
+
+                      
+        </header>
+
+        <div id="container">
+        
+        <section id="dj-main" class="grid-con">
+      
+        <div id="dj-box" class="col-start-3 col-end-8">
+
+            <h2 class="hidden">Nav</h2>
+            <nav id="dj-spin">
+                <ul class="dj">
+                    <li class="jockey">
+                        <div class="img-wrapper">
+                            <img src="images/spin-deck.svg" alt="">
+                        </div>
+                
+                    </li>
+                    <li class="jockey">
+                        <div class="img-wrapper">
+                            <img src="images/spin-deck.svg" alt="">
+                        </div>
+                    </li>
+                </ul>
+               </nav>
+            </div>
+             
+              <section id="reset-display" >
+                <h2 class="hidden">Reset Selector</h2>
                 <nav>
-                    <div>
+                     <div>  
+                      
                         <h2 class="inforeset">Reset Track</h2>
                     </div>
                 </nav>
-            </section>
-
-            <section id="mixer-control" class="col-start-5 col-span-6">
-                <h2>Media Control</h2>
-                <section id="track-display">
-                    <nav>
-                        <div>
-                            <audio class="trackref" id="audioMain" src="audio/maintrack1.wav"></audio>
-                            <h2 class="infoPlay">Select Track</h2>
-                        </div>
-                        <div>
-                            <h2 class="infoPlay" id="reset">Reset</h2>
-                        </div>
-                    </nav>
                 </section>
-                <nav id="control-nav">
-                    <ul class="media-control">
-                        <li id="minus-button">
-                            <div class="img-wrapper">
-                                <img src="images/minus-button.svg" alt="">
-                            </div>
-                        </li>
-                        <li id="play-button">
-                            <div class="img-wrapper">
-                                <img src="images/play-button.svg" alt="">
-                            </div>
-                        </li>
-                        <li id="pause-button">
-                            <div class="img-wrapper">
-                                <img src="images/pause-button.svg" alt="">
-                            </div>
-                        </li>
-                        <li id="plus-button">
-                            <div class="img-wrapper">
-                                <img src="images/plus-button.svg" alt="">
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
+            
+        
+            <section id="mixer-control" class="col-start-5 col-span-6" >
 
-            <div id="effect-section" class="col-start-6">
-                <h2>Effects Control</h2>
-                <nav id="effect-nav">
-                    <ul class="effect-control">
-                        <li id="echo" class="effectshaddow">
-                            <div class="img-wrapper">
-                                <span>Echo</span>
-                            </div>
-                        </li>
-                        <li id="scratch" class="effectshaddow">
-                            <div class="img-wrapper">
-                                <span>Scratch</span>
-                            </div>
-                        </li>
-                        <li id="reverb" class="effectshaddow">
-                            <div class="img-wrapper">
-                                <span>Reverse</span>
-                            </div>
-                        </li>
-                        <li id="pitch" class="effectshaddow">
-                            <div class="img-wrapper">
-                                <span>Pitch</span>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
+                <h2 class="hidden"> Media Control</h2>
+              
+
+    <section id="track-display" >
+        <h2 class="hidden">Track Selector</h2>
+        <nav>
+             <div>  
+                <audio class="trackref" id="audioMain" src="audio/card-mixing-48088.mp3"></audio>
+                <h2 class="infoPlay">Select Track</h2>
             </div>
 
-            <section id="drop-section" class="grid-con">
-                <h2>Drop Section</h2>
-                <div id="drop-instrument" class="col-start-2 effectshadow">
-                    <nav id="drop-nav">
-                        <ul class="drop-box">
-                            <li class="undefined-drop">
-                                <div class="img-wrapper b1">
-                                    <span>Drop Here!</span>
-                                </div>
-                            </li>
-                            <li class="undefined-drop">
-                                <div class="img-wrapper b2">
-                                    <span>Drop Here!</span>
-                                </div>
-                            </li>
-                            <li class="undefined-drop">
-                                <div class="img-wrapper b3">
-                                    <span>Drop Here!</span>
-                                </div>
-                            </li>
-                            <li class="undefined-drop">
-                                <div class="img-wrapper b4">
-                                    <span>Drop Here!</span>
-                                </div>
-                            </li>
-                            <li class="undefined-drop">
-                                <div class="img-wrapper b5">
-                                    <span>Drop Here!</span>
-                                </div>
-                            </li>
-                            <li class="undefined-drop">
-                                <div class="img-wrapper b6">
-                                    <span>Drop Here!</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div id="miniTrackers">
-                    <audio data-minitrack="1" data-minisuffix="1" src="audio/mt11.wav" class="mt-minis"></audio>
-                    <audio data-minitrack="1" data-minisuffix="2" src="audio/mt12.wav" class="mt-minis"></audio>
-                    <audio data-minitrack="1" data-minisuffix="3" src="audio/mt13.wav" class="mt-minis"></audio>
-                    <audio data-minitrack="1" data-minisuffix="4" src="audio/mt15.wav" class="mt-minis"></audio>
-                    <audio data-minitrack="1" data-minisuffix="5" src="audio/mt15.wav" class="mt-minis"></audio>
-                    <audio data-minitrack="1" data-minisuffix="6" src="audio/mt16.wav" class="mt-minis"></audio>
-                </div>
-            </section>
-
-            <section id="instruments" class="col-start-4 col-span-6 effectshadow">
-                <h2>Instrument Drag</h2>
-                <nav id="character-nav">
-                    <ul class="characters">
-                        <li class="defined-drop">
-                            <div class="img-wrapper">
-                                <img src="images/card.jpg" class="puzzle-image" alt="Card" data-minitrack="1">
-                            </div>
-                        </li>
-                        <li class="defined-drop">
-                            <div class="img-wrapper">
-                                <img src="images/alice_falling.jpg" class="puzzle-image" alt="Alice" data-minitrack="2">
-                            </div>
-                        </li>
-                        <li class="defined-drop">
-                            <div class="img-wrapper">
-                                <img src="images/rabbit.jpg" class="puzzle-image" alt="Rabbit" data-minitrack="3">
-                            </div>
-                        </li>
-                        <li class="defined-drop">
-                            <div class="img-wrapper">
-                                <img src="images/clock.jpg" class="puzzle-image" alt="Clock" data-minitrack="4">
-                            </div>
-                        </li>
-                        <li class="defined-drop">
-                            <div class="img-wrapper">
-                                <img src="images/book.jpg" class="puzzle-image" alt="Book" data-minitrack="5">
-                            </div>
-                        </li>
-                        <li class="defined-drop">
-                            <div class="img-wrapper">
-                                <img src="images/hat.jpg" class="puzzle-image" alt="Hat" data-minitrack="6">
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
+            <div>  
+                
+                <h2 class="infoPlay" id="reset">Reset</h2>
+            </div>
+        </nav>
         </section>
-    </div>
 
-    <footer>
-        <p>&copy; 2024 Music Mixer. All rights reserved.</p>
+  
+             <nav id="control-nav" >
+                <ul class="media-control">
+                    <li id="minus-button">
+                        <div class="img-wrapper">
+                            <img src="images/rewind-button.jpg" alt="">
+                        </div>
+                      
+                        
+                    </li>
+                    <li id="play-button">
+                        <div class="img-wrapper">
+                            <img src="images/play-button.jpg" alt="">
+                        </div>
+                    
+                        
+                    </li>
+                    
+                    <li id="pause-button">
+                        <div class="img-wrapper">
+                            <img src="images/pause-button.jpg" alt="">
+                        </div>
+                    
+                        
+                    </li>
+                    <li id="plus-button">
+                        <div class="img-wrapper">
+                            <img src="images/plus-button.jpg" alt="">
+                        </div>
+                
+                        
+                    </li>
+                   
+                </ul>
+    
+            </nav>
+        </section>
+   
+        
+
+   
+<div id="effect-section"  class=" col-start-6">
+
+    <h2 class="hidden"> Media Control</h2>
+
+ <nav id="effect-nav" >
+    <ul class="effect-control ">
+        <li id="echo" class="effectshaddow">
+            <div class="img-wrapper ">
+                <span> A</span>
+            </div>
+           
+            
+        </li>
+        <li id="scracth" class="effectshaddow">
+            <div class="img-wrapper">
+                <span>L</span>
+            </div>
+          
+            
+        </li>
+      
+        <li id="reverb" class="effectshdadow">
+            <div class="img-wrapper">
+                <span>I</span>
+            </div>
+          
+            
+        </li>
+        <li id="pitch" class="effectshadodw">
+            <div class="img-wrapper">
+                <span>C</span>
+            </div>
+           
+        </li>
+
+        <li id="pause" class="effectshadodw">
+            <div class="img-wrapper">
+                <span>E</span>
+            </div>
+           
+        </li>
+       
+    </ul>
+
+</nav>
+</div>
+      
+
+ <section id="drop-section"  class="grid-con ">
+    <h2 class="hidden"> Character Nav</h2>
+ <div id="drop-instrument" class="col-start-2 effectshadow">
+    <nav id="drop-nav" >
+        <ul class="drop-box">
+            <li class="undefined-drop">
+                <div class="img-wrapper b1">
+                   
+                </div>
+              
+                <span> Drop Here!</span>
+            </li>
+            <li class="undefined-drop">
+                <div class="img-wrapper b2">
+                   
+                </div>
+                
+                <span> Drop Here!</span>
+            </li>
+          
+            <li class="undefined-drop">
+                <div class="img-wrapper b3">
+                
+                </div>
+             
+                <span> Drop Here!</span>
+            </li>
+            <li class="undefined-drop">
+                <div class="img-wrapper b4">
+                   
+                </div>
+                
+                <span> Drop Here!</span>
+            </li>
+            
+            <li class="undefined-drop">
+                <div class="img-wrapper b5">
+                   
+                </div>
+               
+                <span> Drop Here!</span>
+            </li>
+            <li class="undefined-drop">
+                <div class="img-wrapper b6">
+                  
+                </div>
+                
+                <span> Drop Here!</span>
+            </li>
+        </ul>
+
+    </nav>
+</div>
+
+
+<div id="miniTrackers">
+    <audio data-minitrack="1" data-minisuffix="1" src="audio/stirring teacup.mp3" class="mt-minis"></audio>
+    <audio data-minitrack="1" data-minisuffix="2" src="audio/old-fashioned-clock-sound-37729.mp3" class="mt-minis"></audio>
+    <audio data-minitrack="1" data-minisuffix="3" src="audio/kettle-short-86546.mp3" class="mt-minis"></audio>
+    <audio data-minitrack="1" data-minisuffix="4" src="audio/falling-whistle-cartoon-180579.mp3" class="mt-minis"></audio>
+    <audio data-minitrack="1" data-minisuffix="5" src="audio/card-mixing-48088.mp3" class="mt-minis"></audio>
+    <audio data-minitrack="1" data-minisuffix="6" src="audio/bookpageshuffle-106111.mp3" class="mt-minis"></audio>
+
+</div>
+
+
+</section>
+        
+
+        
+         <section id="instruments" class="col-start-4 col-span-6 effectshadow" >
+            <h2 class="hidden"> Character Nav</h2>
+            <nav id="character-nav" >
+                <ul class="characters">
+                    <li class="defined-drop">
+                        <div class="img-wrapper">
+                            <img src="images/teacup.jpg" class="puzzle-image" alt="" data-minitrack="1">
+                            <audio data-minitrack="1" data-minisuffix="" src="audio/stirring teacup.mp3" class="mt-minis"></audio>
+                           
+                        </div>
+        
+                        <span> Drag Me!</span>
+                    </li>
+                    <li class="undefined-drag">
+                        <div class="img-wrapper">
+                            <img src="images/clock.jpg" class="puzzle-image" alt="" data-minitrack="2">
+                            <audio data-minitrack="2" data-minisuffix="2"  src="audio/old-fashioned-clock-sound-37729.mp3" class="mt-minis"></audio>
+                         
+                        </div>
+                
+                        <span> Drag Me!</span>
+                    </li>
+                  
+                    <li class="undefined-drag">
+                        <div class="img-wrapper">
+                            <img src="images/alice_falling.jpg" class="puzzle-image" alt="" data-minitrack="3">
+                            <audio data-minitrack="3" data-minisuffix="3"  src="audio/falling-whistle-cartoon-180579.mp3" class="mt-minis"></audio>
+                            
+                        </div>
+                
+                        <span> Drag Me!</span>
+                    </li>
+                    <li class="undefined-drag">
+                        <div class="img-wrapper">
+                            <img src="images/book.jpg" class="puzzle-image" alt="" data-minitrack="4">
+                            <audio data-minitrack="4" data-minisuffix="4"  src="audio/bookpageshuffle-106111.mp3" class="mt-minis"></audio>
+                           
+                        </div>
+                  
+                        <span> Drag Me!</span>
+                    </li>
+                    
+                    <li class="undefined-drag">
+                        <div class="img-wrapper">
+                            <img src="images/kettle.jpg" class="puzzle-image" alt="" data-minitrack="5">
+                            <audio data-minitrack="5" data-minisuffix="5"  src="audio/kettle-short-86546.mp3" class="mt-minis"></audio>
+                           
+                        </div>
+                    
+                        <span> Drag Me!</span>
+                    </li>
+                    <li class="undefined-drag">
+                        <div class="img-wrapper">
+                            <img src="images/card.jpg" class="puzzle-image" alt="" data-minitrack="6">
+                            <audio data-minitrack="6" data-minisuffix="6" src="audio/card-mixing-48088.mp3" class="mt-minis"></audio>
+                        </div>
+                  
+                        <span> Drag Me!</span>
+                    </li>
+                </ul>
+
+            </nav>
+        </section>
+    </section>
+
+</div>
+
+
+    <footer class=" grid-con" > 
+       
+        <h2 class=" sticky-footer col-start-1 col-span-2"> &copy; Alice in Wonderland  </h2>
+    
+        <h2 class="sticky-footer col-start-3 col-span-6">Select A Track and Have Fun!</h2>
+       <h2 class=" sticky-footer author col-start-9 col-span-3"> Done by Sashoye &amp; Stacey </h2>
+    
+
     </footer>
-
-    <script src="script.js"></script>
-</body>
+    <script src="js/main.js"></script>  
+    </body>
 </html>
