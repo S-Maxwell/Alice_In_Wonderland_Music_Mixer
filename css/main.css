@@ -325,7 +325,7 @@ input {
     width: 48px;
     height: 45px;
     margin: 10px 8px;
-    background-color: rgb(8, 227, 73);
+    background-color: purple;
     color: #000000;
     display: flex;
     align-items: center;
@@ -343,13 +343,13 @@ input {
 
 @keyframes shadowColorChange {
     0% {
-        box-shadow: inset 6px -6px 6px #ff0000, 4px -2px 4px 0px #000000;
+        box-shadow: inset 6px -6px 6px pink, 4px -2px 4px 0px #000000;
     }
     50% {
-        box-shadow: inset 6px -6px 6px #00ff00, 4px -2px 4px 0px #000000;
+        box-shadow: inset 6px -6px 6px blueviolet, 4px -2px 4px 0px #000000;
     }
     100% {
-        box-shadow: inset 6px -6px 6px #0000ff, 4px -2px 4px 0px #000000;
+        box-shadow: inset 6px -6px 6px lavenderblush, 4px -2px 4px 0px #000000;
     }
 }
 
@@ -361,6 +361,7 @@ footer {
     background-color: #ffffff;
     color: #000000;
     padding: 0 10px;
+    font-size: small;
 }
 
 footer p {
