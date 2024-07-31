@@ -1,52 +1,56 @@
-body, html {
+body {
+    background-image: url('images/alice_background.jpg');
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: url('images/alice_background.jpg') no-repeat center center fixed;
-    background-size: cover;
     font-family: 'Arial', sans-serif;
 }
 
-.keys {
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.dj, .characters, .effect-control, .drop-box, .media-control {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 20px;
 }
-
-.key {
-    border: 0.5rem solid black;
-    border-radius: 0.5rem;
-    margin: 1rem;
-    padding: 1rem;
-    transition: all 0.07s ease;
-    width: 8rem;
+.dj li, .characters li, .effect-control li, .drop-box li, .media-control li {
+    flex: 1;
     text-align: center;
-    user-select: none;
-    cursor: pointer;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background: rgba(154, 63, 63, 0.2);
 }
-
-.key img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
+.img-wrapper {
+    margin-bottom: 10px;
 }
-
-.key .sound {
+.img-wrapper img, .img-wrapper span {
+    max-width: 80px;
     display: block;
-    font-size: 1.2rem;
-    color: #555;
-    margin-top: 0.5rem;
+    margin: 0 auto;
 }
-
-.key:active {
-    transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
+.img-wrapper span {
+    font-size: 24px;
+    font-weight: bold;
+}
+.effectshaddow, .effectshadow, .undefined-drop {
+    transition: background 0.3s;
+}
+.effectshaddow:hover, .effectshadow:hover, .undefined-drop:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
