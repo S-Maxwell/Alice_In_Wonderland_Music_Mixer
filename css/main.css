@@ -1,5 +1,10 @@
 html {
-    background-image: url(../images/alice_background.jpg);
+    background-image: url(../images/9408.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 #container {
@@ -16,7 +21,6 @@ html {
 }
 
 header {
-    background-image: url(../images/alice-header-bg.jpg);
     background-color: rgb(0, 0, 0);
     background-size: cover;
     filter: contrast(100%);
@@ -85,6 +89,10 @@ input {
 /* ====================== DJ Section ====================== */
 #dj-main {
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #dj-spin {
@@ -153,6 +161,10 @@ input {
 #character-nav {
     width: 600px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
 
 .characters {
@@ -246,6 +258,9 @@ input {
 /* ====================== Drop Section ====================== */
 #drop-section {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #drop-instrument {
@@ -254,15 +269,14 @@ input {
     border-radius: 12px;
     width: fit-content;
     height: 150px;
-    margin-left: -320px;
-    margin-bottom: 10px;
-    margin-top: -10px;
-    grid-column: 1/1;
+    margin: 10px;
+    padding: 10px;
 }
 
 #drop-nav {
     width: 600px;
     display: flex;
+    justify-content: center;
 }
 
 .drop-box {
@@ -344,17 +358,27 @@ input {
 
 @keyframes shadowColorChange {
     0% {
-        box-shadow: inset 6px -6px 6px #ff000000, 4px -2px 4px 0px #ff0000;
+        box-shadow: inset 6px -6px 6px #ff0000, 4px -2px 4px 0px #000000;
     }
-    20% {
-        box-shadow: inset 6px -6px 6px #ffbf0000, 4px -2px 4px 0px #ffbf00;
+    50% {
+        box-shadow: inset 6px -6px 6px #00ff00, 4px -2px 4px 0px #000000;
     }
-    40% {
-        box-shadow: inset 6px -6px 6px #ffff0000, 4px -2px 4px 0px #ffff00;
+    100% {
+        box-shadow: inset 6px -6px 6px #0000ff, 4px -2px 4px 0px #000000;
     }
-    60% {
-        box-shadow: inset 6px -6px 6px #00ff0000, 4px -2px 4px 0px #00ff00;
-    }
-    80% {
-        box-shadow: inset
+}
+
+/* ====================== Footer ====================== */
+footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}
 
